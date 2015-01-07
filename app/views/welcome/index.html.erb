@@ -1,2 +1,98 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Stone Grading Submissions</h1>
+<%= form_tag("/search", method: "put") do %>
+  <%= label_tag(:user1_email, "User1 Email:") %>
+  <%= text_field_tag(:user1_email) %><br>
+  <%= label_tag(:user2_email, "User2 Email:") %>
+  <%= text_field_tag(:user2_email) %><br>
+  <%= label_tag(:stone_control_number, "Stone Control Number:") %>
+  <input id="stone_control_number" name="stone_control_number" type="text" onkeypress="return event.keyCode != 13;"><br>
+  
+  
+  <h2>Clarity Grade</h2>
+  <div>
+  <input type="checkbox" class="hidden" name="fl" id="fl">
+  <label for="fl" class="noselect center_vertically">FL</label>
+  <input type="checkbox" class="hidden" name="if" id="if">
+  <label for="if" class="noselect center_vertically">IF</label>
+  <input type="checkbox" class="hidden" name="vvs1" id="vvs1">
+  <label for="vvs1" class="noselect center_vertically">VVS1</label>
+  <input type="checkbox" class="hidden" name="vvs2" id="vvs2">
+  <label for="vvs2" class="noselect center_vertically">VVS2</label>
+  <input type="checkbox" class="hidden" name="vs1" id="vs1">
+  <label for="vs1" class="noselect center_vertically">VS1</label>
+  <input type="checkbox" class="hidden" name="vs2" id="vs2">
+  <label for="vs2" class="noselect center_vertically">VS2</label>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+  <div>
+  <input type="checkbox" class="hidden" name="si1" id="si1">
+  <label for="si1" class="noselect center_vertically">SI1</label>
+  <input type="checkbox" class="hidden" name="si2" id="si2">
+  <label for="si2" class="noselect center_vertically">SI2</label>
+  <input type="checkbox" class="hidden" name="i1" id="i1">
+  <label for="i1" class="noselect center_vertically">I1</label>
+  <input type="checkbox" class="hidden" name="i2" id="i2">
+  <label for="i2" class="noselect center_vertically">I2</label>
+  <input type="checkbox" class="hidden" name="i3" id="i3">
+  <label for="i3" class="noselect center_vertically">I3</label>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <h2>Polish Grade</h2>
+  <div>
+  <input type="checkbox" class="hidden" name="excellent" id="excellent">
+  <label for="excellent" class="noselect center_vertically">Excellent</label>
+  <input type="checkbox" class="hidden" name="very_good" id="very_good">
+  <label for="very_good" class="noselect float ">Very Good</label>
+  <input type="checkbox" class="hidden" name="good" id="good">
+  <label for="good" class="noselect center_vertically">Good</label>
+  <input type="checkbox" class="hidden" name="fair" id="fair">
+  <label for="fair" class="noselect center_vertically">Fair</label>
+  <input type="checkbox" class="hidden" name="poor" id="poor">
+  <label for="poor" class="noselect center_vertically">Poor</label>
+  </div>
+  
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  
+  
+  <h2>Symmetry Validation</h2>
+  <div>
+  <input type="checkbox" class="hidden" name="agree" id="agree">
+  <label for="agree" class="noselect center_vertically">Agree</label>
+  <input type="checkbox" class="hidden" name="disagree" id="disagree">
+  <label for="disagree" class="noselect center_vertically">Disagree</label>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <%= submit_tag("Submit") %>
+  
+
+<% end %>
+
+
+
+
+<%= image_tag("green_check.jpg", :alt => "Green Check") %>
+<%= image_tag("red_x.jpg", :alt => "Red X") %>
