@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user1: MyString
+  user2: MyString
+  stone_control_number: 1
+  clarity_grade_1: MyString
+  clarity_grade_2: MyString
+  polish_grade_1: MyString
+  polish_grade_2: MyString
+  symmetry_validation_1: false
+  symmetry_validation_2: false
+  clarity_agreement: false
+  polish_agreement: false
+  symmetry_agreement: false
+  overall_agreement: false
+
+two:
+  user1: MyString
+  user2: MyString
+  stone_control_number: 1
+  clarity_grade_1: MyString
+  clarity_grade_2: MyString
+  polish_grade_1: MyString
+  polish_grade_2: MyString
+  symmetry_validation_1: false
+  symmetry_validation_2: false
+  clarity_agreement: false
+  polish_agreement: false
+  symmetry_agreement: false
+  overall_agreement: false
