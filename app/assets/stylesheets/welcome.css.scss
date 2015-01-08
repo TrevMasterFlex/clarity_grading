@@ -6,7 +6,7 @@ body {
     background-color: #00CCFF;
 }
 
-.hidden {position:absolute;visibility:hidden;opacity:0;}
+.hidden {display:none}
 
 input[type=checkbox] + label {
   background-color: #66FFFF;
