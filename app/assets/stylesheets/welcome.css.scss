@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+    background-color: #00CCFF;
+}
+
 .hidden {position:absolute;visibility:hidden;opacity:0;}
 
 input[type=checkbox] + label {
@@ -47,4 +51,20 @@ input[type=checkbox]:checked + label {
 .one_word {
 	line-height: 65px;
 	height:65px;
+}
+
+.red {
+	color: #CC0066;
+}
+
+.green {
+	color: #009900;
+}
+
+.no_border {
+	border:none;
+}
+
+.no_display{
+	display:none;
 }
