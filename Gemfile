@@ -1,7 +1,6 @@
 source 'http://rubygems.org'  #change back to https
 
 gem 'pg'
-gem 'jquery_mobile_rails'
 group :production, :staging do
   gem 'rails_12factor'
 end
