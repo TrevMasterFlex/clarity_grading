@@ -4,10 +4,10 @@
 
 $ ->
   $(".hidden").on "click", ->
-    if (($('#clarity_grade_set1 :checkbox:checked').length + $('#clarity_grade_set2 :checkbox:checked').length) == 1) and $('#polish_grade_set :checkbox:checked').length == 1 and $('#symmetry_validation_set :checkbox:checked').length == 1
+    if $('#clarity_grade_set :checkbox:checked').length == 1 and $('#polish_grade_set :checkbox:checked').length == 1 and $('#symmetry_validation_set :checkbox:checked').length == 1
       $('#green_check').removeClass('no_display')
       $('#red_x').addClass('no_display')
-    else if ((($('#clarity_grade_set1 :checkbox:checked').length + $('#clarity_grade_set1 :checkbox:checked').length) == 2) or $('#polish_grade_set :checkbox:checked').length == 2 or $('#symmetry_validation_set :checkbox:checked').length == 2) and ((($('#clarity_grade_set1 :checkbox:checked').length + $('#clarity_grade_set2 :checkbox:checked').length) >= 1) and $('#polish_grade_set :checkbox:checked').length >= 1 and $('#symmetry_validation_set :checkbox:checked').length >= 1)
+    else if ($('#clarity_grade_set :checkbox:checked').length == 2 or $('#polish_grade_set :checkbox:checked').length == 2 or $('#symmetry_validation_set :checkbox:checked').length == 2) and ($('#clarity_grade_set :checkbox:checked').length >= 1 and $('#polish_grade_set :checkbox:checked').length >= 1 and $('#symmetry_validation_set :checkbox:checked').length >= 1)
       $('#green_check').addClass('no_display')
       $('#red_x').removeClass('no_display')
     else

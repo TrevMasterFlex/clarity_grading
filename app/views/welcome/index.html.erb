@@ -6,16 +6,28 @@ class = "green">
 <% end %>
 <%= @message %>
 </h1>
-<h1>Stone Grading Submissions</h1>
 <%= form_tag("/grade_submission", method: "put") do %>
-  <%= label_tag(:user1_email, "User1 Email:") %>
-  <input id="user1_email" name="user1_email" type="text" value=<%= @user1_email %>><br>
-  <%= label_tag(:user2_email, "User2 Email:") %>
-  <input id="user2_email" name="user2_email" type="text" value=<%= @user2_email %>><br>
-  <%= label_tag(:stone_control_number, "Stone Control Number:") %>
-  <input id="stone_control_number" name="stone_control_number" type="text" onkeypress="return event.keyCode != 13;"><br>
+  <div id="top_container">
+    <div>
+      <h1>Stone Grading Submissions</h1>
+      <%= label_tag(:user1_email, "User1 Email:") %>
+      <input id="user1_email" name="user1_email" type="text" value=<%= @user1_email %>><br>
+      <%= label_tag(:user2_email, "User2 Email:") %>
+      <input id="user2_email" name="user2_email" type="text" value=<%= @user2_email %>><br>
+      <%= label_tag(:stone_control_number, "Stone Control Number:") %>
+      <input id="stone_control_number" name="stone_control_number" type="text" autofocus="true" onkeypress="return event.keyCode != 13;"><br>
+    </div>
+    <div id="status_container">
+      <div id="green_check" class = "no_display">
+        <%= image_tag("green_check.png", :alt => "Green Check", height: '150') %>
+      </div>
+      <div id="red_x" class = "no_display">
+        <%= image_tag("red_x.png", :alt => "Red X", height: '150') %>
+      </div>
+    </div>
+  </div>
   <h2>Clarity Grade</h2>
-  <fieldset id="clarity_grade_set1" class="no_border">
+  <fieldset id="clarity_grade_set" class="no_border">
     <input type="checkbox" class="hidden" name="fl" id="fl">
     <label for="fl" class="noselect one_word">FL</label>
     <input type="checkbox" class="hidden" name="if" id="if">
@@ -28,8 +40,6 @@ class = "green">
     <label for="vs1" class="noselect one_word">VS1</label>
     <input type="checkbox" class="hidden" name="vs2" id="vs2">
     <label for="vs2" class="noselect one_word">VS2</label>
-  </fieldset>
-  <fieldset id="clarity_grade_set2" class="no_border">
     <input type="checkbox" class="hidden" name="si1" id="si1">
     <label for="si1" class="noselect one_word">SI1</label>
     <input type="checkbox" class="hidden" name="si2" id="si2">
@@ -41,31 +51,33 @@ class = "green">
     <input type="checkbox" class="hidden" name="i3" id="i3">
     <label for="i3" class="noselect one_word">I3</label>
   </fieldset>
-  <h2>Polish Grade</h2>
-  <fieldset id="polish_grade_set" class="no_border">
-    <input type="checkbox" class="hidden" name="excellent" id="excellent">
-    <label for="excellent" class="noselect one_word">Excellent</label>
-    <input type="checkbox" class="hidden" name="very_good" id="very_good">
-    <label for="very_good" class="noselect two_words">Very Good</label>
-    <input type="checkbox" class="hidden" name="good" id="good">
-    <label for="good" class="noselect one_word">Good</label>
-    <input type="checkbox" class="hidden" name="fair" id="fair">
-    <label for="fair" class="noselect one_word">Fair</label>
-    <input type="checkbox" class="hidden" name="poor" id="poor">
-    <label for="poor" class="noselect one_word">Poor</label>
-  </fieldset>
-  <h2>Symmetry Validation</h2>
-  <fieldset id="symmetry_validation_set" class="no_border">
-    <input type="checkbox" class="hidden" name="agree" id="agree">
-    <label for="agree" class="noselect one_word">Agree</label>
-    <input type="checkbox" class="hidden" name="disagree" id="disagree">
-    <label for="disagree" class="noselect one_word">Disagree</label>
-  </fieldset>
-  <%= submit_tag("Submit") %>
+  <div id="bottom_container">
+    <div>
+      <h2>Polish Grade</h2>
+      <fieldset id="polish_grade_set" class="no_border">
+        <input type="checkbox" class="hidden" name="excellent" id="excellent">
+        <label for="excellent" class="noselect one_word">Excellent</label>
+        <input type="checkbox" class="hidden" name="very_good" id="very_good">
+        <label for="very_good" class="noselect two_words">Very Good</label>
+        <input type="checkbox" class="hidden" name="good" id="good">
+        <label for="good" class="noselect one_word">Good</label>
+        <input type="checkbox" class="hidden" name="fair" id="fair">
+        <label for="fair" class="noselect one_word">Fair</label>
+        <input type="checkbox" class="hidden" name="poor" id="poor">
+        <label for="poor" class="noselect one_word">Poor</label>
+      </fieldset>
+    </div>
+    <div>
+      <h2>Symmetry Validation</h2>
+      <fieldset id="symmetry_validation_set" class="no_border">
+        <input type="checkbox" class="hidden" name="agree" id="agree">
+        <label for="agree" class="noselect one_word">Agree</label>
+        <input type="checkbox" class="hidden" name="disagree" id="disagree">
+        <label for="disagree" class="noselect one_word">Disagree</label>
+      </fieldset>
+    </div>
+    <div id="submit_container">
+      <%= submit_tag("Submit") %>
+    </div>
+  </div>
 <% end %>
-<div id="green_check" class = "no_display">
-  <%= image_tag("green_check.png", :alt => "Green Check") %>
-</div>
-<div id="red_x" class = "no_display">
-  <%= image_tag("red_x.png", :alt => "Red X") %>
-</div>

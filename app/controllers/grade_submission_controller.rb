@@ -45,9 +45,9 @@ class GradeSubmissionController < ApplicationController
 	if clarity_grade_1.nil? or polish_grade_1.nil? or symmetry_validation_1.nil? or user1_email.empty? or user2_email.empty? or stone_control_number.empty? or stone_control_number.to_i == 0
       @error_found = TRUE
     end
-	clarity_agreement = clarity_grade_1 == clarity_grade_2
-	polish_agreement = polish_grade_1 == polish_grade_2
-	symmetry_agreement = symmetry_validation_1 == symmetry_validation_2
+	clarity_agreement = clarity_grade_2.nil?
+	polish_agreement = polish_grade_2.nil?
+	symmetry_agreement = symmetry_validation_2.nil?
 	overall_agreement = clarity_agreement and polish_agreement and symmetry_agreement
 	return {"user1_email"=> user1_email, "user2_email"=> user2_email, "stone_control_number"=> stone_control_number, "clarity_grade_1"=> clarity_grade_1, "clarity_grade_2"=> clarity_grade_2, "polish_grade_1"=> polish_grade_1, "polish_grade_2"=> polish_grade_2, "symmetry_validation_1"=> symmetry_validation_1, "symmetry_validation_2"=> symmetry_validation_2, "clarity_agreement"=> clarity_agreement, "polish_agreement"=> polish_agreement, "symmetry_agreement"=> symmetry_agreement, "overall_agreement"=> overall_agreement}
   end

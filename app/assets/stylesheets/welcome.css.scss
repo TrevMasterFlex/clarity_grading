@@ -68,3 +68,20 @@ input[type=checkbox]:checked + label {
 .no_display{
 	display:none;
 }
+
+#top_container {
+	display:flex;
+	height: 155px;
+}
+
+#bottom_container {
+	display:flex;
+}
+
+#status_container {
+	margin-left:100px;
+}
+
+#submit_container {
+	margin-top:100px;
+}
