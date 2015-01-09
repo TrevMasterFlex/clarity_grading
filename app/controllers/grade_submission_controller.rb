@@ -42,7 +42,7 @@ class GradeSubmissionController < ApplicationController
 	clarity_grade_1, clarity_grade_2 = first_two_grades(clarity_grades)
 	polish_grade_1, polish_grade_2 = first_two_grades(polish_grades)
 	symmetry_validation_1, symmetry_validation_2 = first_two_grades(symmetry_grades)
-	if clarity_grade_1.nil? or polish_grade_1.nil? or symmetry_validation_1.nil? or user1_email.empty? or user2_email.empty? or stone_control_number.empty? or stone_control_number.to_i == 0
+	if clarity_grade_1.nil? or polish_grade_1.nil? or symmetry_validation_1.nil? or user1_email.empty? or user2_email.empty? or stone_control_number.empty?
       @error_found = TRUE
     end
 	clarity_agreement = clarity_grade_2.nil?
