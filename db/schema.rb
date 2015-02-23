@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109184239) do
+ActiveRecord::Schema.define(version: 20150108161252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,16 +19,18 @@ ActiveRecord::Schema.define(version: 20150109184239) do
   create_table "grade_submissions", force: true do |t|
     t.string   "user1_email"
     t.string   "user2_email"
-    t.string   "stone_control_number"
+    t.float    "stone_control_number"
     t.string   "clarity_grade_1"
     t.string   "clarity_grade_2"
     t.string   "polish_grade_1"
     t.string   "polish_grade_2"
-    t.boolean  "symmetry_validation_1"
-    t.boolean  "symmetry_validation_2"
+    t.string   "symmetry_validation_1"
+    t.string   "symmetry_validation_2"
+    t.string   "symmetry_given"
     t.boolean  "clarity_agreement"
     t.boolean  "polish_agreement"
-    t.boolean  "symmetry_agreement"
+    t.boolean  "grader_symmetry_agreement"
+    t.boolean  "overall_symmetry_agreement"
     t.boolean  "overall_agreement"
     t.datetime "created_at"
     t.datetime "updated_at"

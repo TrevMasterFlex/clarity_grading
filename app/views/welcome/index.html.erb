@@ -8,7 +8,7 @@ class = "green">
 </h1>
 <%= form_tag("/grade_submission", method: "put") do %>
   <div id="top_container">
-    <div>
+    <div id="users_and_control">
       <h1>Round Brilliant - GIA Focus</h1>
       <%= label_tag(:user1_email, "User1 Email:") %>
       <input id="user1_email" name="user1_email" type="text" value=<%= @user1_email %>><br>
@@ -29,55 +29,80 @@ class = "green">
   <h2>Clarity Grade</h2>
   <fieldset id="clarity_grade_set" class="no_border">
     <input type="checkbox" class="hidden" name="fl" id="fl">
-    <label for="fl" class="noselect one_word">FL</label>
+    <label for="fl" class="noselect one_word tile_spacing">FL</label>
     <input type="checkbox" class="hidden" name="if" id="if">
-    <label for="if" class="noselect one_word">IF</label>
+    <label for="if" class="noselect one_word tile_spacing">IF</label>
     <input type="checkbox" class="hidden" name="vvs1" id="vvs1">
-    <label for="vvs1" class="noselect one_word">VVS1</label>
+    <label for="vvs1" class="noselect one_word tile_spacing">VVS1</label>
     <input type="checkbox" class="hidden" name="vvs2" id="vvs2">
-    <label for="vvs2" class="noselect one_word">VVS2</label>
+    <label for="vvs2" class="noselect one_word tile_spacing">VVS2</label>
     <input type="checkbox" class="hidden" name="vs1" id="vs1">
-    <label for="vs1" class="noselect one_word">VS1</label>
+    <label for="vs1" class="noselect one_word tile_spacing">VS1</label>
     <input type="checkbox" class="hidden" name="vs2" id="vs2">
-    <label for="vs2" class="noselect one_word">VS2</label>
+    <label for="vs2" class="noselect one_word tile_spacing">VS2</label>
     <input type="checkbox" class="hidden" name="si1" id="si1">
-    <label for="si1" class="noselect one_word">SI1</label>
+    <label for="si1" class="noselect one_word tile_spacing">SI1</label>
     <input type="checkbox" class="hidden" name="si2" id="si2">
-    <label for="si2" class="noselect one_word">SI2</label>
+    <label for="si2" class="noselect one_word tile_spacing">SI2</label>
     <input type="checkbox" class="hidden" name="i1" id="i1">
-    <label for="i1" class="noselect one_word">I1</label>
+    <label for="i1" class="noselect one_word tile_spacing">I1</label>
     <input type="checkbox" class="hidden" name="i2" id="i2">
-    <label for="i2" class="noselect one_word">I2</label>
+    <label for="i2" class="noselect one_word tile_spacing">I2</label>
     <input type="checkbox" class="hidden" name="i3" id="i3">
     <label for="i3" class="noselect one_word">I3</label>
   </fieldset>
   <div id="bottom_container">
-    <div>
-      <h2>Polish Grade</h2>
-      <fieldset id="polish_grade_set" class="no_border">
-        <input type="checkbox" class="hidden" name="excellent" id="excellent">
-        <label for="excellent" class="noselect one_word">Excellent</label>
-        <input type="checkbox" class="hidden" name="very_good" id="very_good">
-        <label for="very_good" class="noselect two_words">Very Good</label>
-        <input type="checkbox" class="hidden" name="good" id="good">
-        <label for="good" class="noselect one_word">Good</label>
-        <input type="checkbox" class="hidden" name="fair" id="fair">
-        <label for="fair" class="noselect one_word">Fair</label>
-        <input type="checkbox" class="hidden" name="poor" id="poor">
-        <label for="poor" class="noselect one_word">Poor</label>
-      </fieldset>
-    </div>
-    <div>
-      <h2>Symmetry Validation</h2>
-      <fieldset id="symmetry_validation_set" class="no_border">
-        <input type="checkbox" class="hidden" name="agree" id="agree">
-        <label for="agree" class="noselect one_word">Agree</label>
-        <input type="checkbox" class="hidden" name="disagree" id="disagree">
-        <label for="disagree" class="noselect one_word">Disagree</label>
-      </fieldset>
-    </div>
-    <div id="submit_container">
-      <%= submit_tag("Submit") %>
-    </div>
+	<div id="symmetry_container">
+      <div id="symmetry_given_container">
+        <h2>Symmetry Given</h2>
+        <fieldset id="symmetry_given_set" class="no_border">
+          <input type="checkbox" class="hidden" name="symmetry_given_excellent" id="symmetry_given_excellent">
+          <label for="symmetry_given_excellent" class="noselect one_word tile_spacing">Excellent</label>
+          <input type="checkbox" class="hidden" name="symmetry_given_very_good" id="symmetry_given_very_good">
+          <label for="symmetry_given_very_good" class="noselect two_words tile_spacing">Very Good</label>
+          <input type="checkbox" class="hidden" name="symmetry_given_good" id="symmetry_given_good">
+          <label for="symmetry_given_good" class="noselect one_word tile_spacing">Good</label>
+          <input type="checkbox" class="hidden" name="symmetry_given_fair" id="symmetry_given_fair">
+          <label for="symmetry_given_fair" class="noselect one_word tile_spacing">Fair</label>
+          <input type="checkbox" class="hidden" name="symmetry_given_poor" id="symmetry_given_poor">
+          <label for="symmetry_given_poor" class="noselect one_word">Poor</label>
+        </fieldset>
+      </div>
+	  <div id="symmetry_validation_container">
+        <h2>Symmetry Validation</h2>
+        <fieldset id="symmetry_validation_set" class="no_border">
+          <input type="checkbox" class="hidden" name="symmetry_validation_excellent" id="symmetry_validation_excellent">
+          <label for="symmetry_validation_excellent" class="noselect one_word tile_spacing">Excellent</label>
+          <input type="checkbox" class="hidden" name="symmetry_validation_very_good" id="symmetry_validation_very_good">
+          <label for="symmetry_validation_very_good" class="noselect two_words tile_spacing">Very Good</label>
+          <input type="checkbox" class="hidden" name="symmetry_validation_good" id="symmetry_validation_good">
+          <label for="symmetry_validation_good" class="noselect one_word tile_spacing">Good</label>
+          <input type="checkbox" class="hidden" name="symmetry_validation_fair" id="symmetry_validation_fair">
+          <label for="symmetry_validation_fair" class="noselect one_word tile_spacing">Fair</label>
+          <input type="checkbox" class="hidden" name="symmetry_validation_poor" id="symmetry_validation_poor">
+          <label for="symmetry_validation_poor" class="noselect one_word">Poor</label>
+        </fieldset>
+      </div>
+	</div>
+	<div id="bottom_right_container">
+	  <div id="polish_container">
+        <h2>Polish Grade</h2>
+        <fieldset id="polish_grade_set" class="no_border">
+          <input type="checkbox" class="hidden" name="polish_excellent" id="polish_excellent">
+          <label for="polish_excellent" class="noselect one_word tile_spacing">Excellent</label>
+          <input type="checkbox" class="hidden" name="polish_very_good" id="polish_very_good">
+          <label for="polish_very_good" class="noselect two_words tile_spacing">Very Good</label>
+          <input type="checkbox" class="hidden" name="polish_good" id="polish_good">
+          <label for="polish_good" class="noselect one_word tile_spacing">Good</label>
+          <input type="checkbox" class="hidden" name="polish_fair" id="polish_fair">
+          <label for="polish_fair" class="noselect one_word tile_spacing">Fair</label>
+          <input type="checkbox" class="hidden" name="polish_poor" id="polish_poor">
+          <label for="polish_poor" class="noselect one_word">Poor</label>
+        </fieldset>
+      </div>
+	  <div id="submit_container">
+        <%= submit_tag("Submit") %>
+      </div>
+	</div>
   </div>
 <% end %>
