@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background-color: #00CCFF;
+    background-color: #D5D8DE;
 }
 
 .hidden {position:absolute;visibility:hidden;opacity:0;}
@@ -84,4 +84,8 @@ input[type=checkbox]:checked + label {
 
 #submit_container {
 	margin-top:100px;
+}
+
+.noselect {
+	margin-right:30px;
 }

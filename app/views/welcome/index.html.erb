@@ -9,12 +9,12 @@ class = "green">
 <%= form_tag("/grade_submission", method: "put") do %>
   <div id="top_container">
     <div>
-      <h1>Stone Grading Submissions</h1>
+      <h1>Round Brilliant - GIA Focus</h1>
       <%= label_tag(:user1_email, "User1 Email:") %>
       <input id="user1_email" name="user1_email" type="text" value=<%= @user1_email %>><br>
       <%= label_tag(:user2_email, "User2 Email:") %>
       <input id="user2_email" name="user2_email" type="text" value=<%= @user2_email %>><br>
-      <%= label_tag(:stone_control_number, "Stone Control Number:") %>
+      <%= label_tag(:stone_control_number, "Control Number:") %>
       <input id="stone_control_number" name="stone_control_number" type="text" autofocus="true" onkeypress="return event.keyCode != 13;"><br>
     </div>
     <div id="status_container">
